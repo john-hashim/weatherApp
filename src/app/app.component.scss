@@ -1,0 +1,185 @@
+*{
+    padding:0;
+    margin: 0;
+}
+.wrapper{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    .body{
+        width: 60%;
+        height: 100%;
+        form{
+            z-index: 10;
+            position: fixed;
+            width:60%;
+            margin:auto;
+            margin-top: 10px;
+            border: none !important;
+            input{
+                width: 95% !important;
+                height:3em ;
+            }
+            i{
+                cursor: pointer;
+            }
+        }
+        .days-collection{
+            margin-top: 3em;
+            height: 28vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .card{
+                margin-left: 3px;
+                height: 80%;
+                width: 13%;
+                cursor: pointer;
+                border-width: 1px;
+                transition: border-width,border;
+                transition-duration: .5s;
+                transition-timing-function: linear;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    height:20%;
+                }
+                .day-name{
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+                .temp{
+                    font-size: 14px;
+                }
+                .current{
+                    color: gray;
+                    font-size: 12px;
+                }
+                &:hover{
+                    border: rgb(108, 180, 238) solid;
+                    border-width: 2px;
+                }
+            }
+        }
+        .graph-main{
+            height: 45em;
+            width: 100%;
+            box-shadow:0px 2px 5px rgb(218, 211, 211);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .heading{
+                height: 100px;
+                width: 90%;
+                display: flex;
+                align-items: center;
+                .temp{
+                    font-size: 35px;
+                    font-weight: 900;
+                }
+                .img{
+                    img{
+                        height: 40px;
+                        margin-left: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .graph1{
+                height: 350px;
+                canvas{
+                    height: 18em;
+                    width: 50em;
+                }
+            }
+            .graph2{
+                height: 250px;
+                padding-top: 30px;
+                canvas{
+                    height: 15em;
+                    width: 30em;
+                }
+            }
+            .properties{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 95%;
+                p{
+                    line-height: 1;
+                    border-radius: 7px;
+                    padding: 3px 20px;
+                    background-color: rgb(225, 246, 247);
+                    font-size: 25px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+.shadow:focus,.shadow:active{
+    box-shadow: 0px .5px .5px black;
+}
+input:active,input:focus
+{
+    outline:none !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+@media(max-width:768px){
+    .wrapper{
+        .body{
+            width: 90%;
+            form{
+                width: 90%;
+                margin-top: 10px;
+                input{
+                    width: 90% !important;
+                }
+            }
+            .days-collection{
+                margin-top: 1em!important;
+                overflow-x: scroll;
+                position: fixed!important;
+                width: 21em !important;
+                .card{
+                    position: relative;
+                    height: 60%;
+                    width:70px!important;
+                    .day-name{
+                        font-size: 11px!important;
+                    }
+                    .temp{
+                        font-size: 12px;
+                    }
+                    .current{
+                        font-size: 12px;
+                    }
+                }   
+            }
+            .graph-main{
+                margin-top: 13em;
+                .graph1{
+                    height: 200px;
+                    canvas{
+                        height: 25em;
+                        width: 20em;
+                    }
+                }
+                .graph2{
+                        height: 50px;
+                        canvas{
+                            height: 20em;
+                            width: 21em;
+                        }
+                    
+                }
+            }
+        }
+    }
+}
+
