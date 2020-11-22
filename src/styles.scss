@@ -9,26 +9,40 @@ body{
     font-family: 'Lato', sans-serif;
 }
 .filter{
-
+    cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: white;
     z-index: 10;
     border-radius: 5px;
     margin-left: 16px;
     margin-top: 5px;
-    width:48.7em;
+    width:47em;
     height:2.5em;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(207, 207, 207, 0.856);
-    box-shadow: 0px .5px .5px rgb(201, 192, 192);
-    padding-left: 2em;
+    box-shadow: 0px 2px 5px rgb(201, 192, 192);
+    padding-left: 1em;
+    .name-of-city{
+        width: 85%;
+       padding-left: 1em;
+    }
+    .flex-div{
+        display: flex;
+        flex-direction: column;
+            p{
+                  margin: auto;
+                  text-align: right;
+                  padding-right: 5px;
+            }
+            .temp{
+                font-size: 10px;
+                margin: 1px;
+                padding-right: 5px;
+            }
+    }
 }
 @media(max-width:768px){
     .filter{
         margin-left: 16px;
-        width: 16em;
+        width: 18em;
     }
 }

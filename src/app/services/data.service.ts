@@ -9,18 +9,13 @@ export class DataService {
   constructor(private http:HttpClient){}
   api="8ef4ae3a2c5adb586e4b89b2452e27ac";
 
+  // gapi="AIzaSyD8zdx7P_M0j1oKNrs6TyjfW7zYYrUg3E8"
+  // getLocation(lat,lon){
+  //     return this.http.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=${this.gapi}`).subscribe(val=>console.log(val));
+  // }
 
-  getDayArray(){
-    // this.http.get(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${this.api}`)
-    //     .subscribe(val=>{
-    //       console.log(val);
-    //     })
-
-    
-    // return this.weekDetails;
-  }
-  getDailyForcast(){
-    return this.http.get(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${this.api}`)
+  getDailyForcast(lat,lon){
+    return this.http.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${this.api}`)
     .pipe(map(value=>value));
   }
 }

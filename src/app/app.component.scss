@@ -11,6 +11,7 @@
         width: 60%;
         height: 100%;
         form{
+            padding-left: 1em;
             z-index: 10;
             position: fixed;
             width:60%;
@@ -59,15 +60,17 @@
                     font-size: 12px;
                 }
                 &:hover{
-                    border: rgb(108, 180, 238) solid;
+                    border: #6cb4ee solid;
                     border-width: 2px;
+                    transform: scale(1.05);
+                    
                 }
             }
         }
         .graph-main{
             height: 45em;
             width: 100%;
-            box-shadow:0px 2px 5px rgb(218, 211, 211);
+            box-shadow:0px 2px 10px rgb(218, 211, 211);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -96,11 +99,13 @@
                 }
             }
             .graph2{
-                height: 250px;
+                height: 400px;
                 padding-top: 30px;
                 canvas{
                     height: 15em;
                     width: 30em;
+                    background-color: rgb(255, 255, 227);
+                    box-shadow: 0px 2px 5px rgb(226, 223, 223);
                 }
             }
             .properties{
@@ -125,9 +130,10 @@
 }
 input:active,input:focus
 {
+    border: none;
     outline:none !important;
     -webkit-appearance:none;
-    box-shadow: none !important;
+    box-shadow: 0px 3px 5px rgb(199, 192, 192) !important;
 }
 
 @media(max-width:768px){
@@ -138,14 +144,17 @@ input:active,input:focus
                 width: 90%;
                 margin-top: 10px;
                 input{
-                    width: 90% !important;
+                    width: 85%!important;
                 }
             }
             .days-collection{
-                margin-top: 1em!important;
+                margin-top: 1.5em!important;
+                margin: auto;
                 overflow-x: scroll;
-                position: fixed!important;
-                width: 21em !important;
+                width: 21em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 .card{
                     position: relative;
                     height: 60%;
@@ -154,7 +163,7 @@ input:active,input:focus
                         font-size: 11px!important;
                     }
                     .temp{
-                        font-size: 12px;
+                        font-size: 10px;
                     }
                     .current{
                         font-size: 12px;
@@ -162,7 +171,7 @@ input:active,input:focus
                 }   
             }
             .graph-main{
-                margin-top: 13em;
+                margin-top: 1em;
                 .graph1{
                     height: 200px;
                     canvas{
@@ -182,4 +191,17 @@ input:active,input:focus
         }
     }
 }
+@media(max-width:321px){
+    .days-collection{
+        margin-top: 2em!important;
+        width: 18em !important;
+    }
+    input{
+        // width: 80%!important;
+        height:2em !important;
+    }    
+}
 
+i{
+    cursor: pointer;
+}

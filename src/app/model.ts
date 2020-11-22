@@ -1,5 +1,7 @@
 export class weekDetails{
     constructor( 
+       public lat:number,
+       public lon:number,  
        public day:string,
        public temp:number,
        public img:string,
