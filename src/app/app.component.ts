@@ -9,7 +9,7 @@ import { weekDetails,PlaceModel }from '../app/model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  
+
   chart=[];
   chart2=[]
   singleweek:weekDetails
@@ -29,7 +29,12 @@ export class AppComponent implements OnInit{
               {name:'kolkata',lat:'22.5726',lon:'88.3639',current:''},
               {name:'pune',lat:'18.5204',lon:'73.8567',current:''},
               {name:'bengaluru',lat:'12.9716',lon:'77.5946',current:''},
-              {name:'New Delhi',lat:'28.6139',lon:'77.2090',current:''},
+              {name:'Hyderabad',lat:'17.3850',lon:'78.4867',current:''},
+              {name:'Kerala',lat:'10.8505',lon:'76.2711',current:''},
+              {name:'Tamil Nadu',lat:'11.1271',lon:'78.6569',current:''},
+              {name:'Karnataka',lat:'15.3173',lon:'75.7139',current:''},
+              {name:'Himalayas',lat:'28.5983',lon:'83.9311',current:''},
+              {name:'Gurugram',lat:'28.4595',lon:'77.0266',current:''},
             ];
 
   graphDetails:weekDetails[]=[];
@@ -121,7 +126,7 @@ export class AppComponent implements OnInit{
             }
             else if(div.innerText=="Rain"){
               let img=document.createElement('img');
-              img.src="../assets/icons/small/Rain.png";
+              img.src="../assets/icons/small/rain.png";
               filterDiv.appendChild(img);
             }
             else{
